@@ -10,13 +10,11 @@
 # My LinkedIn: https://www.linkedin.com/in/nick-mcclure-578565295/
 
 # Imported Libraries and Modules:
-from interfaces import Repairable
 from MusicalInstrument import MusicalInstrument
 
-class PercussionFamily(MusicalInstrument, Repairable):
-    def __init__(self, num_of_keys):
-        super().__init__()
-        self.num_of_keys = num_of_keys
-        
-    def get_num_of_keys(self):
-        return self.num_of_keys
+class WoodwindFamily(MusicalInstrument):
+    def __init__(self, made_of):
+        self.made_of = "Wood"
+    
+    def get_made_of(self):
+        return self.made_of

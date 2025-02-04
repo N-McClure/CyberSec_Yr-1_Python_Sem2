@@ -13,10 +13,9 @@
 from interfaces import Repairable
 from MusicalInstrument import MusicalInstrument
 
-class PercussionFamily(MusicalInstrument, Repairable):
-    def __init__(self, num_of_keys):
-        super().__init__()
-        self.num_of_keys = num_of_keys
+class StringFamily(MusicalInstrument, Repairable):
+    def __init__(self, num_of_strings):
+        self.num_of_strings = num_of_strings
         
-    def get_num_of_keys(self):
-        return self.num_of_keys
+    def get_num_of_strings(self):
+        return self.num_of_strings
