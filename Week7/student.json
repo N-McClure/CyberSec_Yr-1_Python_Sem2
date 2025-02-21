@@ -1,0 +1,45 @@
+{
+	"students":[
+		{
+			"name":"Bob",
+			"sid":111,
+			"campus":"Oakville",
+			"address":{
+			"street":"main st.",
+			"city":"Toronto"
+			}
+		},
+		{
+			"name":"Alice",
+			"sid":222,
+			"campus":"Brampton",
+			"address":{
+			"street":"Your st.",
+			"city":"Ajax"
+			}
+		},
+		{
+			"name":"John",
+			"sid":333,
+			"campus":"Brampton",
+			"address":{
+			"street":"My st.",
+			"city":"Oakville"
+			}
+		}
+	],
+	"courses":[
+		{
+			"name":"Python",
+			"credit":3
+		},
+		{
+			"name":"Java",
+			"credit":4
+		},
+		{
+			"name":"C#",
+			"credit":3
+		}
+	]	
+}

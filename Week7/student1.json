@@ -1,0 +1,9 @@
+{
+	"name":"Bob",
+	"sid":111,
+	"campus":"Oakville",
+	"address":{
+	"street":"main st.",
+	"city":"Toronto"
+	}
+}
