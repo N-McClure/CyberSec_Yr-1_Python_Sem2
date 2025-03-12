@@ -49,7 +49,8 @@ def read_students():
     for row in rows:
         print(row)
     
-def update_student(name, sid, campus):
+def update_student(name, sid):
+    campus = input("Enter campus location: ")
     sql = 'UPDATE Students SET name=?, sid=?, campus=? WHERE name=?'
     my_cursor.execute(sql, (name, sid, campus, name))
     conn.commit()
@@ -69,6 +70,13 @@ def get_student():
     row = my_cursor.fetchone()
     if row:
         print('Student:', row)
+        
+# Function to clear the database of all rows in the table:
+def clear_table():
+    sql = 'DELETE FROM Students'
+    my_cursor.execute(sql)
+    conn.commit()
+    print('All students deleted from the database.')
 
 
 if __name__ == '__main__':
@@ -94,7 +102,7 @@ if __name__ == '__main__':
     read_students()
     
     # === Student Updates ===
-    update_student('John Doe', 123456, 'East Campus')
+    update_student('John Doe', 123456)
     
     # === Student Deletions ===
     delete_student('Jane Smith')
@@ -104,6 +112,14 @@ if __name__ == '__main__':
     
     # === Specific Student Retrieval ===
     get_student()
+    
+    # === Clear All Students ===
+    clear_table()  
+
+    # === Student Readings after Deletion ===
+    read_students()
+    
+# Note: The database is persistent and will retain all data even after the program has finished running.
 
     # Close connection
     conn.close()
