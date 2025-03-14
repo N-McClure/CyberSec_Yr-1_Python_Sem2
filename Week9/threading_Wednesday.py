@@ -34,4 +34,9 @@ if __name__ == '__main__':
     t2.start()
     t3.start()
 
+    # NOTE: .join() causes the main thread to wait til the prefix thread of ".join()" is finished before executing.
+    t1.join()
+    t2.join()
+    t3.join()
+
     print('Main thread Done!!!!!!!!!')
