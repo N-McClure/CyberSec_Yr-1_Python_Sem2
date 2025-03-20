@@ -16,7 +16,6 @@ def create_connection():
         print('Cursor created...')
 
     
-
 def create_cursor():
     global my_cursor
     my_cursor = conn.cursor()
